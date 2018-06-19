@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pcws.main.TaskService_Controller">
+   <children>
+      <Pane fx:id="colorAppear" prefHeight="15.0" prefWidth="405.0" />
+      <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="405.0" style="-fx-background-color: #ddeeee;">
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="78.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="227.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="35.0" />
+         </padding>
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="60.0" text="DeadLine" textAlignment="CENTER" textFill="#397272" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="60.0" text="Start Date" textAlignment="CENTER" textFill="#397272" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="60.0" text="Contents" textAlignment="CENTER" textFill="#397272" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="60.0" text="Import" textAlignment="CENTER" textFill="#397272" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="60.0" text="Tag" textAlignment="CENTER" textFill="#397272" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="78.0" text=" Work Time" textAlignment="CENTER" textFill="#397272" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="60.0" text="Color" textAlignment="CENTER" textFill="#397272" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="74.0" text="CheckList" textAlignment="CENTER" textFill="#397272" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+            <TextField fx:id="taskName" maxWidth="171.0" minWidth="160.0" prefHeight="23.0" prefWidth="161.0" style="-fx-border-color: #397272;" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="importace" maxWidth="171.0" prefWidth="147.0" style="-fx-border-color: #397272;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <DatePicker fx:id="startDate" prefWidth="171.0" style="-fx-border-color: #397272;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></DatePicker>
+            <DatePicker fx:id="endDate" prefWidth="171.0" style="-fx-border-color: #397272;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></DatePicker>
+            <ChoiceBox fx:id="tagChoice" maxWidth="171.0" prefWidth="147.0" style="-fx-border-color: #397272;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></ChoiceBox>
+            <TextField fx:id="taskTime" maxWidth="171.0" prefWidth="147.0" style="-fx-border-color: #397272;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <ColorPicker fx:id="colorChoice" maxWidth="171.0" prefWidth="147.0" style="-fx-border-color: #397272;" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></ColorPicker>
+            <Button fx:id="contentBtn" maxWidth="171.0" mnemonicParsing="false" onAction="#contentBtnAct" prefHeight="23.0" prefWidth="147.0" style="-fx-background-color: #cce5e5; -fx-border-color: #397272;" text="Contents View" textFill="#397272" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="chkListBtn" maxWidth="171.0" mnemonicParsing="false" onAction="#chkListAct" prefHeight="23.0" prefWidth="147.0" style="-fx-background-color: #cce5e5; -fx-border-color: #397272;" text="CheckLIst View" textFill="#397272" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#updateBtnAct" prefHeight="23.0" prefWidth="60.0" style="-fx-background-color: #cce5e5; -fx-border-color: #397272;" text="Update" textFill="#397272" GridPane.columnIndex="2" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#deleteBtnAct" prefHeight="23.0" prefWidth="55.0" style="-fx-background-color: #cce5e5; -fx-border-color: #397272;" text="Del" textFill="#397272" GridPane.columnIndex="2" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="120.0" />
+               </GridPane.margin>
+            </Button>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="78.0" text="Task Name" textAlignment="CENTER" textFill="#397272" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>

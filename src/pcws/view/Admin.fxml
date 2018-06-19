@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #eff4f5;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pcws.main.Admin_Controller">
+   <top>
+      <HBox prefHeight="45.0" prefWidth="1286.0" style="-fx-background-color: #529E9E;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="log" fitHeight="40.0" fitWidth="300.0" onMouseClicked="#logClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/log.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="7.0" top="5.0" />
+               </HBox.margin>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+            </ImageView>
+            <ComboBox fx:id="category" prefHeight="29.0" prefWidth="100.0" promptText="Category" style="-fx-background-color: #529E9E; -fx-background-radius: 0;">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="30.0" top="13.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <effect>
+                  <Blend opacity="0.0">
+                     <topInput>
+                        <GaussianBlur>
+                           <input>
+                              <Glow />
+                           </input>
+                        </GaussianBlur>
+                     </topInput>
+                  </Blend>
+               </effect>
+            </ComboBox>
+            <TextField alignment="CENTER" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #B4CED1; -fx-background-radius: 5;">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" top="13.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="search" alignment="TOP_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" mnemonicParsing="false" onAction="#searchClick" prefHeight="28.0" prefWidth="20.0" style="-fx-background-color: #529E9E;" textAlignment="CENTER" textFill="#b4ced1">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="8.0" top="13.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView blendMode="HARD_LIGHT" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/search.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust />
+                     </effect>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ComboBox fx:id="loginAndLogout" nodeOrientation="RIGHT_TO_LEFT" opacity="0.42" prefWidth="80.0" promptText="LOGIN" style="-fx-background-color: #529E9E;">
+               <HBox.margin>
+                  <Insets left="537.0" top="20.0" />
+               </HBox.margin>
+            </ComboBox>
+            <Button fx:id="myImage" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#myImageClick" prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: #3d7676; -fx-background-radius: 0;" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/user2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="650.0" prefWidth="65.0" style="-fx-background-color: #529E9E;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#memberClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #3d7676;" textAlignment="CENTER" textFill="#070707">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/users.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #eff4f5;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="friTableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="590.0" style="-fx-border-radius: 5; -fx-background-radius: 5; -fx-border-color: #aad4d4; -fx-background-color: white;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="320.0" AnchorPane.topAnchor="50.0">
+              <columns>
+                <TableColumn fx:id="num" prefWidth="37.0" style="-fx-border-color: #ddeeee; -fx-font-family: Courier New; -fx-alignment: center;" />
+                <TableColumn fx:id="firId" prefWidth="103.0" style="-fx-border-color: #ddeeee; -fx-alignment: center;" text="ID" />
+                <TableColumn fx:id="friName" style="-fx-border-color: #ddeeee; -fx-alignment: center;" text="Name" />
+                <TableColumn fx:id="friTel" minWidth="0.0" prefWidth="141.0" resizable="false" style="-fx-border-color: #ddeeee; -fx-alignment: center;" text="Tel" />
+                <TableColumn fx:id="friEmail" prefWidth="255.0" style="-fx-border-color: #ddeeee; -fx-alignment: center-left;" text="E-MAIL" />
+              </columns>
+            </TableView>
+            <Button fx:id="memberSearch" alignment="CENTER" contentDisplay="CENTER" layoutX="138.0" layoutY="-1.0" mnemonicParsing="false" onAction="#searchMemAction" onMouseClicked="#friendSearch" style="-fx-background-color: #9bcaca;" text="Search" textAlignment="CENTER" textFill="#4c8a7d" translateX="430.0" translateY="590.0" AnchorPane.leftAnchor="138.0">
+               <font>
+                  <Font name="Lucida Sans Italic" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

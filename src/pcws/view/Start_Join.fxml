@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #529E9E; -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pcws.main.Start_Join_Controller">
+   <children>
+      <Button mnemonicParsing="false" style="-fx-background-color: #529E9E;">
+         <graphic>
+            <ImageView fx:id="log" fitHeight="40.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/log.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label alignment="CENTER" layoutX="516.0" layoutY="110.0" prefHeight="40.0" prefWidth="230.0" style="-fx-text-fill: #ddeeee;" text="MemberShip">
+         <font>
+            <Font name="NanumSquare ExtraBold" size="35.0" />
+         </font>
+      </Label>
+      <VBox alignment="CENTER" layoutX="390.0" layoutY="182.0" prefHeight="436.0" prefWidth="500.0" spacing="15.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="225.0" prefWidth="206.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="100.0" style="-fx-text-fill: #ddeeee;" text="아 이 디">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="id" prefHeight="27.0" prefWidth="230.0" promptText="아이디를 입력해주세요" style="-fx-background-color: #ddeeee;">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="10.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="idOk" alignment="TOP_CENTER" contentDisplay="TOP" minHeight="35.0" mnemonicParsing="false" onMouseClicked="#idOkButton" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #529E9E; -fx-border-color: #ddeeee;" text="중복 확인" textFill="#ddeeee">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="100.0" style="-fx-text-fill: #ddeeee;" text="패스워드">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <PasswordField fx:id="pw" prefHeight="32.0" prefWidth="231.0" promptText="영문, 숫자 포함 8자리 이상">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="10.0" />
+                     </font></PasswordField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="225.0" prefWidth="206.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="100.0" style="-fx-text-fill: #ddeeee;" text="패스워드 확인">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <PasswordField fx:id="pwOk" prefHeight="32.0" prefWidth="231.0" promptText="비밀번호를 다시 입력해주세요.">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="10.0" />
+                     </font></PasswordField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="225.0" prefWidth="206.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="100.0" style="-fx-text-fill: #ddeeee;" text="이름">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="name" minHeight="27.0" prefHeight="30.0" prefWidth="230.0" promptText="한글만 입력가능합니다" style="-fx-background-color: #ddeeee;">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="10.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="225.0" prefWidth="206.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="100.0" style="-fx-text-fill: #ddeeee;" text="생년월일">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="birth" minHeight="27.0" prefHeight="30.0" prefWidth="230.0" promptText="생년월일을 선택해주세요" style="-fx-background-color: #ddeeee;" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="225.0" prefWidth="206.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="100.0" style="-fx-text-fill: #ddeeee;" text="성별">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="gender" minHeight="27.0" prefHeight="30.0" prefWidth="230.0" promptText="남자" style="-fx-background-color: #ddeeee;" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="225.0" prefWidth="206.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="100.0" style="-fx-text-fill: #ddeeee;" text="E-Mail">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="email" minHeight="27.0" prefHeight="27.0" prefWidth="230.0" promptText="이메일을 입력해주세요" style="-fx-background-color: #ddeeee;">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="10.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="emailCerti" minHeight="35.0" mnemonicParsing="false" onMouseClicked="#emailCertiButton" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #529E9E; -fx-border-color: #ddeeee;" text="인 증" textFill="#ddeeee">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="225.0" prefWidth="206.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="100.0" style="-fx-text-fill: #ddeeee;" text="인증 코드">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="emailOk" minHeight="27.0" prefHeight="27.0" prefWidth="230.0" promptText="인증번호를 입력해주세요" style="-fx-background-color: #ddeeee;">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="10.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="emailOkCerti" minHeight="35.0" mnemonicParsing="false" onMouseClicked="#emailOkCertiButton" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #529E9E; -fx-border-color: #ddeeee;" text="확 인" textFill="#ddeeee">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="225.0" prefWidth="206.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="100.0" style="-fx-text-fill: #ddeeee;" text="전화번호">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="tel" minHeight="27.0" prefHeight="27.0" prefWidth="230.0" promptText="반드시 '-'를 넣어주세요" style="-fx-background-color: #ddeeee;">
+                     <font>
+                        <Font name="NanumSquare ExtraBold" size="10.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="111.0" prefWidth="500.0">
+               <children>
+                  <Button fx:id="join" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#joinButton" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #529E9E; -fx-border-color: #ddeeee;" text="Join" textAlignment="CENTER" textFill="#ddeeee">
+                     <font>
+                        <Font name="NanumSquare Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="40.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="reset" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#resetButton" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #529E9E; -fx-border-color: #ddeeee;" text="Reset" textAlignment="CENTER" textFill="#ddeeee">
+                     <font>
+                        <Font name="NanumSquare Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="40.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="cancel" mnemonicParsing="false" onMouseClicked="#cancelButton" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #529E9E; -fx-border-color: #ddeeee;" text="Cancle" textFill="#ddeeee">
+                     <font>
+                        <Font name="NanumSquare Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

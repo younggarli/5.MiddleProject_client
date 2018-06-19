@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #eff4f5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pcws.main.WorkAlarm_Controller">
+   <top>
+      <HBox prefHeight="73.0" prefWidth="1286.0" style="-fx-background-color: #529E9E;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="log" fitHeight="65.0" fitWidth="214.0" onMouseClicked="#logClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/log.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="7.0" top="5.0" />
+               </HBox.margin>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+            </ImageView>
+            <ComboBox fx:id="category" minWidth="120.0" opacity="0.54" prefHeight="40.0" prefWidth="100.0" promptText="Category" style="-fx-background-color: #529E9E; -fx-background-radius: 0;">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="120.0" right="5.0" top="14.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <effect>
+                  <Blend opacity="0.0">
+                     <topInput>
+                        <GaussianBlur>
+                           <input>
+                              <Glow />
+                           </input>
+                        </GaussianBlur>
+                     </topInput>
+                  </Blend>
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ComboBox>
+            <TextField fx:id="searchText" alignment="CENTER" minWidth="350.0" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: #B4CED1; -fx-background-radius: 5;">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" right="2.0" top="19.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="NanumSquare Light" size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="search" alignment="TOP_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" mnemonicParsing="false" onAction="#searchClick" prefHeight="28.0" prefWidth="20.0" style="-fx-background-color: #529E9E;" textAlignment="CENTER" textFill="#b4ced1">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="8.0" top="17.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView blendMode="HARD_LIGHT" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/search.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust />
+                     </effect>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ComboBox fx:id="loginAndLogout" nodeOrientation="RIGHT_TO_LEFT" opacity="0.54" prefHeight="40.0" prefWidth="110.0" promptText="LOGIN" style="-fx-background-color: #529E9E;">
+               <HBox.margin>
+                  <Insets left="233.0" top="14.0" />
+               </HBox.margin>
+            </ComboBox>
+            <Button fx:id="myImage" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#myImageAction" prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: #3d7676; -fx-background-radius: 0;" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/user2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="650.0" prefWidth="72.0" style="-fx-background-color: #529E9E;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#alarmClick" prefHeight="6.0" prefWidth="80.0" style="-fx-background-color: #3d7676;" textAlignment="CENTER" textFill="#070707">
+               <font>
+                  <Font name="Serif Regular" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/alarm.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#messageClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #529E9E;" textAlignment="CENTER" textFill="#070707">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#projectClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #529E9E;" textAlignment="CENTER" textFill="#070707">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/folder.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#memberClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #529E9E;" textAlignment="CENTER" textFill="#070707">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/users.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#mypageClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #529E9E; -fx-font-style: bold;" textAlignment="CENTER" textFill="#070707">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/user%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="projectTap" style="-fx-font-family: Courier New;" text="Project">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #eff4f5;">
+                     <children>
+                        <Button fx:id="proRefresh" layoutX="-11.0" layoutY="28.0" mnemonicParsing="false" onAction="#proRefreshBtn" style="-fx-background-color: #eff4f5;" translateX="1125.0" translateY="20.0" AnchorPane.bottomAnchor="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1155.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/repeat.png" />
+                                 </image>
+                                 <effect>
+                                    <Reflection bottomOpacity="0.18" fraction="0.61" topOffset="0.5" topOpacity="0.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TableView fx:id="proTableView" layoutX="62.0" layoutY="31.0" prefHeight="598.0" prefWidth="1092.0" style="-fx-background-radius: 5; -fx-border-color: #aad4d4; -fx-border-radius: 5;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="30.0">
+                           <columns>
+                           	  <TableColumn fx:id="procheckCol" prefWidth="40.0" style="-fx-alignment: center;" />
+                              <TableColumn fx:id="proNo" maxWidth="1000.0" minWidth="-1.0" prefWidth="60.0" resizable="false" style="-fx-border-color: #ddeeee; -fx-font-family: Courier New; -fx-alignment: center; -fx-text-fill: black; -fx-font-size: 14;" text="No" />
+                              <TableColumn fx:id="projectName" maxWidth="1000.0" minWidth="50.0" prefWidth="490.0" resizable="false" style="-fx-border-color: #ddeeee; -fx-text-fill: black; -fx-font-size: 14;" text="Project Name" />
+                              <TableColumn fx:id="proStartDate" minWidth="118.0" prefWidth="150.0" resizable="false" style="-fx-border-color: #ddeeee; -fx-text-fill: black; -fx-font-size: 14; -fx-alignment: center;" text="StartDate" />
+                              <TableColumn fx:id="proDeadLine" maxWidth="1000.0" minWidth="46.0" prefWidth="150.0" resizable="false" style="-fx-border-color: #ddeeee; -fx-alignment: center; -fx-text-fill: black; -fx-font-size: 14;" text="DeadLine" />
+                              <TableColumn fx:id="proNotificationDate" prefWidth="151.0" resizable="false" style="-fx-border-color: #ddeeee; -fx-alignment: center; -fx-text-fill: black; -fx-font-size: 14;" text="Notification Date" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="proDeleteButton" layoutX="1123.0" layoutY="107.0" mnemonicParsing="false" onAction="#proDeleteButtonAction" style="-fx-background-color: #529E9E;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="messageTap" style="-fx-font-family: Courier New;" text="Message">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #eff4f5;">
+                     <children>
+                        <Button fx:id="mesRefresh" mnemonicParsing="false" onAction="#mesRefreshBtn" style="-fx-background-color: #eff4f5;" translateX="1125.0" translateY="20.0" AnchorPane.bottomAnchor="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1155.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/repeat.png" />
+                                 </image>
+                                 <effect>
+                                    <Reflection bottomOpacity="0.18" fraction="0.61" topOffset="0.5" topOpacity="0.0" />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TableView fx:id="mesTableView" prefHeight="598.0" prefWidth="1092.0" style="-fx-background-radius: 5; -fx-border-color: #aad4d4; -fx-border-radius: 5;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="30.0">
+                           <columns>
+                           	  <TableColumn fx:id="mescheckCol" prefWidth="40.0" style="-fx-alignment: center;" />
+                              <TableColumn fx:id="mesNo" maxWidth="980.0" minWidth="-1.0" prefWidth="60.0" resizable="false" style="-fx-border-color: #ddeeee; -fx-font-family: Courier New; -fx-alignment: center; -fx-text-fill: black; -fx-font-size: 14;" text="No" />
+                              <TableColumn fx:id="mesCon" maxWidth="1000.0" minWidth="50.0" prefWidth="548.0" resizable="false" style="-fx-border-color: #ddeeee; -fx-text-fill: black; -fx-font-size: 14;" text="Contents" />
+                              <TableColumn fx:id="mesRec" minWidth="118.0" prefWidth="122.0" resizable="false" style="-fx-border-color: #ddeeee; -fx-text-fill: black; -fx-font-size: 14; -fx-alignment: center;" text="Receiver" />
+                              <TableColumn fx:id="mesWriter" maxWidth="1000.0" minWidth="46.0" prefWidth="114.0" resizable="false" style="-fx-border-color: #ddeeee; -fx-alignment: center; -fx-text-fill: black; -fx-font-size: 14;" text="Writer" />
+                              <TableColumn fx:id="mesNotificationDate" prefWidth="155.0" resizable="false" style="-fx-border-color: #ddeeee; -fx-alignment: center; -fx-text-fill: black; -fx-font-size: 14;" text="Notification Date" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="mesDeleteButton" layoutX="1123.0" layoutY="107.0" mnemonicParsing="false" onAction="#mesDeleteButtonAction" style="-fx-background-color: #529E9E;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

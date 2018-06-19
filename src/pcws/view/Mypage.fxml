@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #eff4f5;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pcws.main.Mypage_Controller">
+   <top>
+      <HBox prefHeight="73.0" prefWidth="1286.0" style="-fx-background-color: #529E9E;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="log" fitHeight="65.0" fitWidth="214.0" onMouseClicked="#pcwsClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/log.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="7.0" top="5.0" />
+               </HBox.margin>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+            </ImageView>
+            <ComboBox fx:id="comboCate" minWidth="120.0" opacity="0.54" prefHeight="40.0" prefWidth="100.0" promptText="Category" style="-fx-background-color: #529E9E; -fx-background-radius: 0;">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="120.0" top="14.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <effect>
+                  <Blend opacity="0.0">
+                     <topInput>
+                        <GaussianBlur>
+                           <input>
+                              <Glow />
+                           </input>
+                        </GaussianBlur>
+                     </topInput>
+                  </Blend>
+               </effect>
+            </ComboBox>
+            <TextField fx:id="txtSearch" alignment="CENTER" minWidth="350.0" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: #B4CED1; -fx-background-radius: 5;">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" right="2.0" top="19.0" />
+               </HBox.margin>
+            </TextField>
+            <Button alignment="TOP_LEFT" blendMode="LIGHTEN" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="28.0" prefWidth="20.0" style="-fx-background-color: #529E9E;" textAlignment="CENTER" textFill="#b4ced1">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="8.0" top="17.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView blendMode="HARD_LIGHT" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#searchClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/search.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust />
+                     </effect>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ComboBox fx:id="comboLog" minHeight="40.0" minWidth="110.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.42" prefWidth="110.0" promptText="LOGIN" style="-fx-background-color: #529E9E;">
+               <HBox.margin>
+                  <Insets left="235.0" right="3.0" top="14.0" />
+               </HBox.margin>
+            </ComboBox>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: #3d7676; -fx-background-radius: 0;" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/user2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <left>
+      <VBox maxHeight="650.0" prefHeight="650.0" prefWidth="72.0" style="-fx-background-color: #529E9E;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#alertClick" prefHeight="6.0" prefWidth="80.0" style="-fx-background-color: #529E9E;" textAlignment="CENTER" textFill="#070707">
+               <font>
+                  <Font name="Serif Regular" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/alarm.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#taskClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #529E9E;" textAlignment="CENTER" textFill="#070707">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#projectClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #529E9E;" textAlignment="CENTER" textFill="#070707">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/folder.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#memberClick" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #529E9E;" textAlignment="CENTER" textFill="#070707">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/users.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#mypageClick" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #3d7676; -fx-font-style: bold; -fx-background-radius: 0;" textAlignment="CENTER" textFill="#070707">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/user%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane maxWidth="1210.0" minWidth="1208.0" prefHeight="647.0" prefWidth="1212.0" style="-fx-background-color: #3d7676;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" layoutX="329.0" layoutY="49.0" minWidth="453.0" prefHeight="500.0" prefWidth="482.0" spacing="10.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="383.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="186.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="25.0" prefWidth="179.0" text="회 원 정 보        " textFill="#9cdddd">
+                           <font>
+                              <Font name="NanumSquare ExtraBold" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="140.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="349.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="120.0" text="ID" textFill="#9cdddd">
+                           <font>
+                              <Font name="NanumSquare ExtraBold" size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="tfId" prefHeight="30.0" prefWidth="230.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="349.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="120.0" text="Name" textFill="#9cdddd">
+                           <font>
+                              <Font name="NanumSquare ExtraBold" size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="tfName" prefHeight="30.0" prefWidth="230.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="349.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="120.0" text="Birth" textFill="#9cdddd">
+                           <font>
+                              <Font name="NanumSquare ExtraBold" size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="tfBirth" prefHeight="30.0" prefWidth="230.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="349.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="120.0" text="Gender" textFill="#9cdddd">
+                           <font>
+                              <Font name="NanumSquare ExtraBold" size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="tfGender" prefHeight="30.0" prefWidth="230.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="349.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="120.0" text="E-Mail" textFill="#9cdddd">
+                           <font>
+                              <Font name="NanumSquare ExtraBold" size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="tfEmail" prefHeight="30.0" prefWidth="230.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="349.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="120.0" text="Tel" textFill="#9cdddd">
+                           <font>
+                              <Font name="NanumSquare ExtraBold" size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="tfTel" prefHeight="30.0" prefWidth="230.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="50.0" prefWidth="349.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#updateBtn" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #529E9E;" text="수 정" textFill="WHITE">
+                           <font>
+                              <Font name="NanumSquare ExtraBold" size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" right="60.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#outBtn" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #529E9E;" text="탈 퇴" textFill="WHITE">
+                           <font>
+                              <Font name="NanumSquare ExtraBold" size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" right="40.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
